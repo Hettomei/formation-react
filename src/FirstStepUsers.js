@@ -1,10 +1,12 @@
 import React from 'react';
-import Menu from './Menu';
+import DemoUsers from './demo/DemoUsers';
 
 const FirstStepUsers = () => (
   <div>
-    <Menu />
-    <h2>FirstStepUsers</h2>
+    <h2>Créer dynamiquement des noeuds</h2>
+    <p>On veut créer des utilisateurs: un prénom, un nom</p>
+    <p>Puis afficher la liste</p>
+    <DemoUsers />
   </div>
 )
 
