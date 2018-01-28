@@ -11,7 +11,7 @@ import { PATHS } from './constants';
 
 import Home from './Home';
 import ComponentsAndProps from './ComponentsAndProps';
-import FirstStepUsers from './FirstStepUsers';
+import CreateUsersProps from './CreateUsersProps';
 import Page404 from './Page404';
 
 class App extends Component {
@@ -24,7 +24,7 @@ class App extends Component {
               <ul>
                 <li><Link to={PATHS.root}>Home</Link></li>
                 <li><Link to={PATHS.componentsAndProps}>Des components et des props</Link></li>
-                <li><Link to={PATHS.firstStep}>Créer des users</Link></li>
+                <li><Link to={PATHS.createUserProps}>Créer des users</Link></li>
               </ul>
             </Col>
 
@@ -32,7 +32,7 @@ class App extends Component {
               <Switch>
                 <Route exact path={PATHS.root} component={Home}/>
                 <Route path={PATHS.componentsAndProps} component={ComponentsAndProps}/>
-                <Route path={PATHS.firstStep} component={FirstStepUsers}/>
+                <Route path={PATHS.createUserProps} component={CreateUsersProps}/>
                 <Route component={Page404}/>
               </Switch>
             </Col>

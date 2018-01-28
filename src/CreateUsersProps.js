@@ -1,7 +1,7 @@
 import React from 'react';
 import DemoUsers from './demo/DemoUsers';
 
-const FirstStepUsers = () => (
+const CreateUsersProps = () => (
   <div>
     <h2>Créer dynamiquement des noeuds</h2>
     <p>On veut créer des utilisateurs: un prénom, un nom</p>
@@ -10,4 +10,4 @@ const FirstStepUsers = () => (
   </div>
 )
 
-export default FirstStepUsers;
+export default CreateUsersProps;

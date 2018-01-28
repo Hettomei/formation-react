@@ -1,7 +1,7 @@
 const PATHS = {
   root: '/',
   componentsAndProps: '/only-components-and-props',
-  firstStep: '/first-step-users',
+  createUserProps: '/create-users-props',
 }
 
 export { PATHS }
