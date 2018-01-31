@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Panel } from 'react-bootstrap';
 
 import Chrono from './demo/Chrono';
 
@@ -28,7 +29,14 @@ class ComponentsAndState extends Component {
         <button onClick={() => this.incCounter(-1)}>-</button>
         <button onClick={this.incByOne}>+</button>
       </p>
-      <Chrono />
+      <Panel bsStyle="primary">
+        <Panel.Heading>
+          <Panel.Title componentClass="h3">Chrono</Panel.Title>
+        </Panel.Heading>
+        <Panel.Body>
+          <Chrono />
+        </Panel.Body>
+      </Panel>
     </div>
   }
 }

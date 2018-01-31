@@ -11,10 +11,11 @@ import { PATHS } from './constants';
 
 import Home from './Home';
 import Header from './Header';
+import Page404 from './Page404';
 import ComponentsAndProps from './ComponentsAndProps';
 import ComponentsAndState from './ComponentsAndState';
-import CreateUsersProps from './CreateUsersProps';
-import Page404 from './Page404';
+import ExoNChronos from './exo/ExoNChronos';
+import ExoSplitChronos from './exo/ExoSplitChronos';
 
 class App extends Component {
   render() {
@@ -30,7 +31,8 @@ class App extends Component {
                   <li><Link to={PATHS.root}>Home</Link></li>
                   <li><Link to={PATHS.componentsAndProps}>Des components et des props</Link></li>
                   <li><Link to={PATHS.componentsAndState}>Etat interne : le state</Link></li>
-                  <li><Link to={PATHS.createUserProps}>Créer des users</Link></li>
+                  <li><Link to={PATHS.exoNChronos}>Exercice, créer N chronos</Link></li>
+                  <li><Link to={PATHS.exoSplitChronos}>Exercice, split chronos</Link></li>
                 </ul>
               </Col>
 
@@ -39,7 +41,8 @@ class App extends Component {
                   <Route exact path={PATHS.root} component={Home}/>
                   <Route path={PATHS.componentsAndProps} component={ComponentsAndProps}/>
                   <Route path={PATHS.componentsAndState} component={ComponentsAndState}/>
-                  <Route path={PATHS.createUserProps} component={CreateUsersProps}/>
+                  <Route path={PATHS.exoNChronos} component={ExoNChronos}/>
+                  <Route path={PATHS.exoSplitChronos} component={ExoSplitChronos}/>
                   <Route component={Page404}/>
                 </Switch>
               </Col>

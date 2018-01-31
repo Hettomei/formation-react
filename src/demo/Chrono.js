@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Panel } from 'react-bootstrap';
+import { Label, Button } from 'react-bootstrap';
 
 class Chrono extends Component {
 
@@ -36,22 +36,15 @@ class Chrono extends Component {
   }
 
   render() {
-    return <Panel bsStyle="primary">
-      <Panel.Heading>
-        <Panel.Title componentClass="h3">Chrono</Panel.Title>
-      </Panel.Heading>
-      <Panel.Body>
-        <p>{this.state.counter.toFixed(2)} secs</p>
-        <p>
-          {
-            this.state.pause ?
-              <button onClick={this.startTimer}>Continue Timer</button>
-              :
-              <button onClick={this.pauseTimer}>Pause Timer</button>
-          }
-        </p>
-      </Panel.Body>
-    </Panel>
+    return <p><Label bsStyle="primary">{this.state.counter.toFixed(2)} secs</Label>
+      &nbsp;
+      {
+        this.state.pause ?
+          <Button onClick={this.startTimer}>Continue Timer</Button>
+          :
+          <Button onClick={this.pauseTimer}>Pause Timer</Button>
+      }
+    </p>
   }
 }
 
