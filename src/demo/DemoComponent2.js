@@ -1,11 +1,18 @@
 import React from 'react';
+import { Panel } from 'react-bootstrap';
 
 const DemoComponent2 = (props) => (
-  <div>
-    <p>Je suis DemoComponent2, partie haute</p>
-    {props.children}
-    <p>Je suis DemoComponent2, partie basse</p>
-  </div>
+  <Panel bsStyle="success">
+    <Panel.Heading>
+      <Panel.Title componentClass="h3">2eme composant</Panel.Title>
+    </Panel.Heading>
+    <Panel.Body>
+      Composant avec children
+      {props.children}
+      {props.children}
+      {props.children}
+    </Panel.Body>
+  </Panel>
 )
 
 export default DemoComponent2;

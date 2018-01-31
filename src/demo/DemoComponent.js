@@ -1,9 +1,13 @@
 import React from 'react';
+import { Panel } from 'react-bootstrap';
 
 const DemoComponent = () => (
-  <div>
-    <p>Je suis un simple composants</p>
-  </div>
+  <Panel bsStyle="primary">
+    <Panel.Heading>
+      <Panel.Title componentClass="h3">1er composant</Panel.Title>
+    </Panel.Heading>
+    <Panel.Body>Simple composant</Panel.Body>
+  </Panel>
 )
 
 export default DemoComponent;
