@@ -7,13 +7,12 @@ import {
   NavItem,
   NavDropdown,
 } from 'react-bootstrap';
-import linksRoutesComponents from './linksRoutesComponents';
 
 function Header(props) {
   return <Navbar inverse fluid>
     <Navbar.Header>
       <Navbar.Brand>
-        <Link to={linksRoutesComponents[0].path}>Formation React</Link>
+        <Link to='/'>Formation React</Link>
       </Navbar.Brand>
     </Navbar.Header>
     <Nav>
