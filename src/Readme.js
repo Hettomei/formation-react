@@ -44,7 +44,24 @@ npm start
 },
 `}
   </Code>
-  </div>
+
+  <h3>Modifier le projet 'live'</h3>
+  <p>A chaque modification, le serveur recharge la page. Instant feedback</p>
+  <p>Le projet est versionné sous git, vous pouvez expérimenter autant que nécessaire</p>
+  <p>Exemple de workflow</p>
+    <Code>
+      {`
+cd react-budget
+git checkout -b test-exercice-chronos
+# hack hack hack
+git commit
+
+# Retour sur le projet de base
+git checkout master
+`}
+  </Code>
+
+</div>
 )
 
 export default Readme;

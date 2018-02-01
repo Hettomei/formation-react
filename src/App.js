@@ -9,7 +9,6 @@ import { Grid, Row, Col } from 'react-bootstrap';
 import linksRoutesComponents from './linksRoutesComponents';
 
 import Header from './Header';
-import Readme from './Readme';
 import Introduction from './Introduction';
 import MenuLinks from './MenuLinks';
 import Page404 from './Page404';
