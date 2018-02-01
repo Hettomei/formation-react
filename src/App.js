@@ -32,8 +32,7 @@ class App extends Component {
               <Col xs={9} className='demo-col'>
                 <Switch>
                   <Route path='/' exact component={Introduction} />
-                  <Route path='/readme' component={Readme} />
-                  { linksRoutesComponents.flatten.map(({path, exact, component}) => <Route key={path} exact={exact} path={path} component={component} />) }
+                  { linksRoutesComponents.flatten.map(({path, component}) => <Route key={path} exact path={path} component={component} />) }
                   <Route component={Page404}/>
                 </Switch>
               </Col>

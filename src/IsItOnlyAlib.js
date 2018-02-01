@@ -8,8 +8,6 @@ const IsItOnlyAlib = () => (
     <ul>
       <li>Router</li>
       <li>Redux</li>
-      <li>Ce support de formation</li>
-      <li>...</li>
     </ul>
 
     <p>Une agrégation d'outils autours de bonne pratique.</p>
