@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import { LinkContainer } from 'react-router-bootstrap'
 import {
   Navbar,
   Nav,
@@ -16,9 +17,12 @@ function Header(props) {
       </Navbar.Brand>
     </Navbar.Header>
     <Nav>
-      <NavItem href='https://github.com/Hettomei/react-budget'>sources</NavItem>
+      <LinkContainer to="/contact">
+        <NavItem>Contact</NavItem>
+      </LinkContainer>
+      <NavItem href='https://github.com/Hettomei/react-budget'>Sources</NavItem>
       <NavDropdown title="Documentation React" id="basic-nav-dropdown">
-        <NavItem href='https://reactjs.org/'>Home</NavItem>
+        <NavItem href='https://reactjs.org/'>reactjs.org</NavItem>
         <NavItem href='https://github.com/facebook/create-react-app'>Create React apps</NavItem>
       </NavDropdown>
     </Nav>

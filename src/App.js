@@ -10,6 +10,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 import linksRoutesComponents from './linksRoutesComponents';
 
 import Header from './Header';
+import Contact from './Contact';
 import Page404 from './Page404';
 
 import './css/App.css';
@@ -32,6 +33,7 @@ class App extends Component {
               <Col xs={9} className='demo-col'>
                 <Switch>
                   { linksRoutesComponents.map(({path, exact, component}) => <Route key={path} exact={exact} path={path} component={component} />) }
+                  <Route path='/contact' component={Contact} />
                   <Route component={Page404}/>
                 </Switch>
               </Col>

@@ -2,9 +2,10 @@ import React from 'react';
 
 const Home = () => (
   <div>
-    <h2>Formation React</h2>
-    <h3>Timothée GAUTHIER</h3>
-    <p>t.gauthier42@gmail.com</p>
+    <h2>Dans quel cas utiliser React ?</h2>
+    <ul>
+      <li>Simple librairie permettant de mettre à jour le DOM.</li>
+    </ul>
   </div>
 )
 

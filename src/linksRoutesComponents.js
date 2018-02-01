@@ -5,7 +5,7 @@ import ExoNChronos from './exo/ExoNChronos';
 import ExoSplitChronos from './exo/ExoSplitChronos';
 
 const linksRoutesComponents = [
-  { path: '/'                          , exact: true  , component: Home               , desc: 'Home' }                        ,
+  { path: '/'                          , exact: true  , component: Home               , desc: 'Get started' }                 ,
   { path: '/only-components-and-props' , exact: false , component: ComponentsAndProps , desc: 'Des components et des props' } ,
   { path: '/components-and-state'      , exact: false , component: ComponentsAndState , desc: 'Etat interne : le state' }     ,
   { path: '/exo-create-chronos'        , exact: false , component: ExoNChronos        , desc: 'Exercice : créer N chronos' }  ,
