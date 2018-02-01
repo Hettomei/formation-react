@@ -7,15 +7,10 @@ import {
 } from 'react-router-dom'
 import { Grid, Row, Col } from 'react-bootstrap';
 
-import { PATHS } from './constants';
+import linksRoutesComponents from './linksRoutesComponents';
 
-import Home from './Home';
 import Header from './Header';
 import Page404 from './Page404';
-import ComponentsAndProps from './ComponentsAndProps';
-import ComponentsAndState from './ComponentsAndState';
-import ExoNChronos from './exo/ExoNChronos';
-import ExoSplitChronos from './exo/ExoSplitChronos';
 
 class App extends Component {
   render() {
@@ -28,21 +23,13 @@ class App extends Component {
             <Row className="show-grid">
               <Col xs={3} className='menu'>
                 <ul>
-                  <li><Link to={PATHS.root}>Home</Link></li>
-                  <li><Link to={PATHS.componentsAndProps}>Des components et des props</Link></li>
-                  <li><Link to={PATHS.componentsAndState}>Etat interne : le state</Link></li>
-                  <li><Link to={PATHS.exoNChronos}>Exercice, créer N chronos</Link></li>
-                  <li><Link to={PATHS.exoSplitChronos}>Exercice, split chronos</Link></li>
+                  { linksRoutesComponents.map(({path, desc}) => <li key={path}><Link to={path}>{desc}</Link></li>) }
                 </ul>
               </Col>
 
               <Col xs={9}>
                 <Switch>
-                  <Route exact path={PATHS.root} component={Home}/>
-                  <Route path={PATHS.componentsAndProps} component={ComponentsAndProps}/>
-                  <Route path={PATHS.componentsAndState} component={ComponentsAndState}/>
-                  <Route path={PATHS.exoNChronos} component={ExoNChronos}/>
-                  <Route path={PATHS.exoSplitChronos} component={ExoSplitChronos}/>
+                  { linksRoutesComponents.map(({path, exact, component}) => <Route key={path} exact={exact} path={path} component={component} />) }
                   <Route component={Page404}/>
                 </Switch>
               </Col>
