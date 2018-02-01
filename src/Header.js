@@ -17,8 +17,8 @@ function Header(props) {
       </Navbar.Brand>
     </Navbar.Header>
     <Nav>
-      <LinkContainer to="/contact">
-        <NavItem>Contact</NavItem>
+      <LinkContainer to="/readme">
+        <NavItem>A-propos</NavItem>
       </LinkContainer>
       <NavItem href='https://github.com/Hettomei/react-budget'>Sources</NavItem>
       <NavDropdown title="Documentation React" id="basic-nav-dropdown">

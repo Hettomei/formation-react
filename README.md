@@ -11,3 +11,5 @@ npm start
 ```
 
 Open http://localhost:3000 to view it in the browser.
+
+Open http://localhost:3000/readme for more information or read /src/Readme.js
