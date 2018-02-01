@@ -13,18 +13,20 @@ const tree = [
     exact: true,
     component: Introduction,
     desc: 'Introduction',
-    children: [{
-      path: '/intro/3-idea',
-      exact: false,
-      component: ThreeIdea,
-      desc: '3 Idées'
-    },
-    {
-      path: '/intro/are-you-sure-it-is-only-a-lib--confuse',
-      exact: false,
-      component: IsItOnlyAlib,
-      desc: 'Seulement une librairie ?'
-    }]
+    children: [
+      {
+        path: '/intro/3-idea',
+        exact: false,
+        component: ThreeIdea,
+        desc: '3 Idées',
+      },
+      {
+        path: '/intro/are-you-sure-it-is-only-a-lib--confuse',
+        exact: false,
+        component: IsItOnlyAlib,
+        desc: 'Seulement une librairie ?'
+      }
+    ]
   },
   {
     path: '/get-started',

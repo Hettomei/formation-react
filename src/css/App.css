@@ -1,3 +1,20 @@
 .demo-col {
   border-left: 1px solid #e2e0e0;
 }
+
+.menu {
+  margin-top: 30px;
+}
+
+.menu li.active {
+  font-weight: bolder;
+  color: black;
+}
+
+.menu ul > ul {
+  padding-left: 20px;
+}
+
+.menu li.active a{
+  color: black;
+}
