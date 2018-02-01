@@ -52,12 +52,6 @@ const tree = [
     component: ExoNChronos,
     desc: 'Exercice : créer N chronos'
   },
-  {
-    path: '/exo-split-chronos',
-    exact: false,
-    component: ExoSplitChronos,
-    desc: 'Exercice : split chronos'
-  },
 ]
 
 function flat(a, b) {
