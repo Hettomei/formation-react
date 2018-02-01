@@ -12,6 +12,8 @@ import linksRoutesComponents from './linksRoutesComponents';
 import Header from './Header';
 import Page404 from './Page404';
 
+import './css/App.css';
+
 class App extends Component {
   render() {
     return (
@@ -20,14 +22,14 @@ class App extends Component {
           <Header />
 
           <Grid fluid>
-            <Row className="show-grid">
+            <Row >
               <Col xs={3} className='menu'>
                 <ul>
                   { linksRoutesComponents.map(({path, desc}) => <li key={path}><Link to={path}>{desc}</Link></li>) }
                 </ul>
               </Col>
 
-              <Col xs={9}>
+              <Col xs={9} className='demo-col'>
                 <Switch>
                   { linksRoutesComponents.map(({path, exact, component}) => <Route key={path} exact={exact} path={path} component={component} />) }
                   <Route component={Page404}/>
