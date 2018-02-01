@@ -1,5 +1,6 @@
 import Introduction from './Introduction';
 import ThreeIdea from './ThreeIdea';
+import IsItOnlyAlib from './IsItOnlyAlib';
 import GetStarted from './GetStarted';
 import ComponentsAndProps from './ComponentsAndProps';
 import ComponentsAndState from './ComponentsAndState';
@@ -17,6 +18,12 @@ const tree = [
       exact: false,
       component: ThreeIdea,
       desc: '3 Idées'
+    },
+    {
+      path: '/intro/are-you-sure-it-is-only-a-lib--confuse',
+      exact: false,
+      component: IsItOnlyAlib,
+      desc: 'Seulement une librairie ?'
     }]
   },
   {
