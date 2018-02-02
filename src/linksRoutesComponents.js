@@ -8,6 +8,7 @@ import GetStarted from './GetStarted';
 import ComponentsAndProps from './ComponentsAndProps';
 import ComponentsAndState from './ComponentsAndState';
 import ExoNChronos from './exo/ExoNChronos';
+import GameSVG from './GameSVG';
 
 const tree = [
   {
@@ -63,6 +64,11 @@ const tree = [
     path: '/exo-create-chronos',
     component: ExoNChronos,
     desc: 'Exercice : créer N chronos'
+  },
+  {
+    path: '/game-svg',
+    component: GameSVG,
+    desc: 'Un jeux'
   },
 ]
 
