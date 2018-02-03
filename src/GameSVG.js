@@ -8,6 +8,7 @@ const startAt = height / 2
 const minHeight = 50
 const spaceToFly = 50;
 const randomSpike = 6;
+const sizeRound = 10;
 
 function nextHeight(current) {
   const sens = Math.random() > 0.5 ? 1 : -1;
@@ -31,10 +32,13 @@ class GameSVG extends Component {
     for (let i = 0; i < maxI; i++) {
       list.push(nextHeight(list[i]))
     }
+    const roundX = 30
+    const roundY = startAt - sizeRound - 10
 
-    this.state = { list, pause: true }
+    this.state = { list, roundX, roundY, pause: true }
     this.pauseTimer = this.pauseTimer.bind(this)
     this.startTimer = this.startTimer.bind(this)
+    this.handleKeyPress = this.handleKeyPress.bind(this)
   }
 
   startTimer() {
@@ -61,8 +65,31 @@ class GameSVG extends Component {
     });
   }
 
+  handleKeyPress(event) {
+    // console.log(event.key);
+    if(event.key === 'ArrowUp'){
+      this.setState((prevState) => {
+        return { roundY: prevState.roundY - 3 };
+      });
+    } else if(event.key === 'ArrowDown'){
+      this.setState((prevState) => {
+        return { roundY: prevState.roundY + 3 };
+      });
+    }
+
+    if(event.key === 'ArrowLeft'){
+      this.setState((prevState) => {
+        return { roundX: prevState.roundX - 1 };
+      });
+    } else if(event.key === 'ArrowRight'){
+      this.setState((prevState) => {
+        return { roundX: prevState.roundX + 1 };
+      });
+    }
+  }
+
   render() {
-    return <div>
+    return <div onKeyDown={this.handleKeyPress}>
       <p>
         {
           this.state.pause ?
@@ -72,15 +99,16 @@ class GameSVG extends Component {
         }
       </p>
       <svg style={{border: '3px solid'}} width={width} height={height} >
+        <circle cx={this.state.roundX} cy={this.state.roundY} r={sizeRound} fill="black" />
         {this.state.list.map((line, i) => (
           <g key={i} stroke="purple" strokeWidth={5} >
-            <line x1={i*5} y1={height} x2={i*5} y2={line} />
-            <line x1={i*5} y1={0} x2={i*5} y2={line - spaceToFly} />
-          </g>
-        ))}
+          <line x1={i*5} y1={height} x2={i*5} y2={line} />
+          <line x1={i*5} y1={0} x2={i*5} y2={line - spaceToFly} />
+        </g>
+      ))}
       </svg>
-    </div>
-  }
+      </div>
+      }
 }
 
 export default GameSVG;
