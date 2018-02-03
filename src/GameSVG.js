@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 
-function nextHeight(current) {
-  const posNeg = Math.random() > 0.5 ? 1 : -1;
-  const next = current + Math.round(Math.random() * 5) * posNeg
+const width = 600
+const height = 200
 
-  if (next < 10) {
-    return 10
-  }else if (next > 99) {
-    return 99
+const startAt = height / 2
+const minHeight = 50
+const spaceToFly = 50;
+const randomSpike = 6;
+
+function nextHeight(current) {
+  const sens = Math.random() > 0.5 ? 1 : -1;
+  const next = current + Math.round(Math.random() * randomSpike) * sens
+
+  if (next < minHeight) {
+    return minHeight
+  }else if (next > height) {
+    return height
   } else {
     return next;
   }
@@ -18,9 +26,10 @@ class GameSVG extends Component {
 
   constructor(props) {
     super(props);
-    const list = [50]
-    for (let i = 0; i < 200; i++) {
-      list.push(nextHeight(list[list.length - 1]))
+    const list = [startAt]
+    const maxI = width / 5
+    for (let i = 0; i < maxI; i++) {
+      list.push(nextHeight(list[i]))
     }
 
     this.state = { list, pause: true }
@@ -47,7 +56,7 @@ class GameSVG extends Component {
 
   addLine(n) {
     this.setState((prevState, props) => {
-      const last = prevState.list[prevState.list.length - 1] || 50;
+      const last = prevState.list[prevState.list.length - 1];
       return { list: prevState.list.slice(1, 200).concat(nextHeight(last)) };
     });
   }
@@ -55,7 +64,6 @@ class GameSVG extends Component {
   render() {
     return <div>
       <p>
-        &nbsp;
         {
           this.state.pause ?
             <Button onClick={this.startTimer}>Start</Button>
@@ -63,8 +71,13 @@ class GameSVG extends Component {
             <Button onClick={this.pauseTimer}>Pause</Button>
         }
       </p>
-      <svg  width={600} height={100} >
-        {this.state.list.map((line, i) => <line key={i} x1={i*5} y1={400} x2={i*5} y2={line} stroke="green" strokeWidth={3} />)}
+      <svg style={{border: '3px solid'}} width={width} height={height} >
+        {this.state.list.map((line, i) => (
+          <g key={i} stroke="purple" strokeWidth={5} >
+            <line x1={i*5} y1={height} x2={i*5} y2={line} />
+            <line x1={i*5} y1={0} x2={i*5} y2={line - spaceToFly} />
+          </g>
+        ))}
       </svg>
     </div>
   }
