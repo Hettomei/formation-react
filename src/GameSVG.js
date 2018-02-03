@@ -36,9 +36,14 @@ class GameSVG extends Component {
     const roundY = startAt - sizeRound - 10
 
     this.state = { list, roundX, roundY, pause: true }
+
+    this.dx = 0;
+    this.dy = 0;
+
     this.pauseTimer = this.pauseTimer.bind(this)
     this.startTimer = this.startTimer.bind(this)
-    this.handleKeyPress = this.handleKeyPress.bind(this)
+    this.handleKeyDown = this.handleKeyDown.bind(this)
+    this.handleKeyUp = this.handleKeyUp.bind(this)
   }
 
   startTimer() {
@@ -61,35 +66,40 @@ class GameSVG extends Component {
   addLine(n) {
     this.setState((prevState, props) => {
       const last = prevState.list[prevState.list.length - 1];
-      return { list: prevState.list.slice(1, 200).concat(nextHeight(last)) };
+      return {
+        list: prevState.list.slice(1, 200).concat(nextHeight(last)),
+        roundX: prevState.roundX + this.dx,
+        roundY: prevState.roundY + this.dy,
+      };
     });
   }
 
-  handleKeyPress(event) {
-    // console.log(event.key);
+  handleKeyDown(event) {
     if(event.key === 'ArrowUp'){
-      this.setState((prevState) => {
-        return { roundY: prevState.roundY - 3 };
-      });
+      this.dy = -3
     } else if(event.key === 'ArrowDown'){
-      this.setState((prevState) => {
-        return { roundY: prevState.roundY + 3 };
-      });
-    }
-
-    if(event.key === 'ArrowLeft'){
-      this.setState((prevState) => {
-        return { roundX: prevState.roundX - 1 };
-      });
+      this.dy = 3
+    } else if(event.key === 'ArrowLeft'){
+      this.dx = -2
     } else if(event.key === 'ArrowRight'){
-      this.setState((prevState) => {
-        return { roundX: prevState.roundX + 1 };
-      });
+      this.dx = 2
+    }
+  }
+
+  handleKeyUp(event) {
+    if(event.key === 'ArrowUp'){
+      this.dy = 0
+    } else if(event.key === 'ArrowDown'){
+      this.dy = 0
+    } else if(event.key === 'ArrowLeft'){
+      this.dx = 0
+    } else if(event.key === 'ArrowRight'){
+      this.dx = 0
     }
   }
 
   render() {
-    return <div onKeyDown={this.handleKeyPress}>
+    return <div onKeyDown={this.handleKeyDown} onKeyUp={this.handleKeyUp}>
       <p>
         {
           this.state.pause ?
@@ -101,7 +111,7 @@ class GameSVG extends Component {
       <svg style={{border: '3px solid'}} width={width} height={height} >
         <circle cx={this.state.roundX} cy={this.state.roundY} r={sizeRound} fill="black" />
         {this.state.list.map((line, i) => (
-          <g key={i} stroke="purple" strokeWidth={5} >
+          <g key={i} stroke="purple" strokeWidth={4} >
           <line x1={i*5} y1={height} x2={i*5} y2={line} />
           <line x1={i*5} y1={0} x2={i*5} y2={line - spaceToFly} />
         </g>
