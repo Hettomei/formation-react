@@ -5,6 +5,7 @@ import DemoComponent3 from './demo/DemoComponent3';
 
 const ComponentsAndProps = () => (
   <div>
+    <h2>Components</h2>
     <h5>Une simple balise html</h5>
 
     <DemoComponent />

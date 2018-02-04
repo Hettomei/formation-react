@@ -51,7 +51,7 @@ const tree = [
     desc: 'Get started'
   },
   {
-    path: '/only-components-and-props',
+    path: '/components-and-props',
     component: ComponentsAndProps,
     desc: 'Des components et des props',
   },
@@ -68,7 +68,7 @@ const tree = [
   {
     path: '/game-svg',
     component: GameSVG,
-    desc: 'Un jeux'
+    desc: 'Un jeu'
   },
 ]
 

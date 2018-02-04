@@ -16,18 +16,20 @@ class ExoNChronos extends Component {
 
   render() {
     return <div>
+      <h2>Exercice</h2>
+      <p>Créer une infinité de chrono indépendant</p>
+      <p>Dans cette boite de dialogue</p>
       <Panel bsStyle="primary">
         <Panel.Heading>
-          <Panel.Title componentClass="h3">Exercice</Panel.Title>
+          <Panel.Title componentClass="h3">Liste des chronos</Panel.Title>
         </Panel.Heading>
         <Panel.Body>
-          <p>Créer une infinité de chrono indépendant</p>
           <p>
             <button onClick={this.addChrono}>Ajouter Chrono</button>
           </p>
+          {this.state.chronos}
         </Panel.Body>
       </Panel>
-      {this.state.chronos}
     </div>
   }
 }

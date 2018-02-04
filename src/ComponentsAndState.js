@@ -24,6 +24,7 @@ class ComponentsAndState extends Component {
 
   render() {
     return <div>
+    <h2>Etat interne : le state</h2>
       <p>State : {JSON.stringify(this.state, null, 2)}</p>
       <p>
         <button onClick={() => this.incCounter(-1)}>-</button>

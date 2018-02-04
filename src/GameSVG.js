@@ -100,6 +100,16 @@ class GameSVG extends Component {
 
   render() {
     return <div onKeyDown={this.handleKeyDown} onKeyUp={this.handleKeyUp}>
+      <h2>Un jeu</h2>
+      <svg style={{border: '3px solid'}} width={width} height={height} >
+        <circle cx={this.state.roundX} cy={this.state.roundY} r={sizeRound} fill="black" />
+        {this.state.list.map((line, i) => (
+          <g key={i} stroke="purple" strokeWidth={4} >
+            <line x1={i*5} y1={height} x2={i*5} y2={line} />
+            <line x1={i*5} y1={0} x2={i*5} y2={line - spaceToFly} />
+          </g>
+        ))}
+      </svg>
       <p>
         {
           this.state.pause ?
@@ -108,17 +118,8 @@ class GameSVG extends Component {
             <Button onClick={this.pauseTimer}>Pause</Button>
         }
       </p>
-      <svg style={{border: '3px solid'}} width={width} height={height} >
-        <circle cx={this.state.roundX} cy={this.state.roundY} r={sizeRound} fill="black" />
-        {this.state.list.map((line, i) => (
-          <g key={i} stroke="purple" strokeWidth={4} >
-          <line x1={i*5} y1={height} x2={i*5} y2={line} />
-          <line x1={i*5} y1={0} x2={i*5} y2={line - spaceToFly} />
-        </g>
-      ))}
-      </svg>
-      </div>
-      }
+    </div>
+  }
 }
 
 export default GameSVG;
