@@ -9,6 +9,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 import linksRoutesComponents from './linksRoutesComponents';
 
 import Header from './Header';
+import Home from './Home';
 import Introduction from './Introduction';
 import MenuLinks from './MenuLinks';
 import Page404 from './Page404';
@@ -30,7 +31,7 @@ class App extends Component {
 
               <Col xs={9} className='demo-col'>
                 <Switch>
-                  <Route path='/' exact component={Introduction} />
+                  <Route path='/' exact component={Home} />
                   { linksRoutesComponents.flatten.map(({path, component}) => <Route key={path} exact path={path} component={component} />) }
                   <Route component={Page404}/>
                 </Switch>

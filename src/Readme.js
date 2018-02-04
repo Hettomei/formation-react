@@ -1,5 +1,6 @@
 import React from 'react';
 import Code from './shared/Code';
+import logo from './shared/consertoLogo.svg'; // Tell Webpack this JS file uses this image
 
 // just to avoid bot that read github source
 const email = [
@@ -17,7 +18,7 @@ const email = [
 
 const Readme = () => (
   <div>
-    <h2>Formation React</h2>
+    <h2>Formation React, part <img className="readme-conserto" src={logo} alt="Logo" /></h2>
     <p>Pour toutes questions : {email}</p>
 
     <h3>Le projet :</h3>
@@ -49,8 +50,8 @@ npm start
   <p>A chaque modification, le serveur recharge la page. Instant feedback</p>
   <p>Le projet est versionné sous git, vous pouvez expérimenter autant que nécessaire</p>
   <p>Exemple de workflow</p>
-    <Code>
-      {`
+  <Code>
+    {`
 cd react-budget
 git checkout -b test-exercice-chronos
 # hack hack hack
@@ -60,8 +61,7 @@ git commit
 git checkout master
 `}
   </Code>
-
-</div>
+  </div>
 )
 
 export default Readme;
