@@ -38,6 +38,10 @@ function Header(props) {
         <NavItem href='https://reacttraining.com/react-router/'>react-router</NavItem>
       </NavDropdown>
 
+      <NavDropdown title="React-Bootstrap" id="basic-nav-dropdown">
+        <NavItem href='https://react-bootstrap.github.io/'>React-Bootstrap</NavItem>
+      </NavDropdown>
+
     </Nav>
   </Navbar>
 }
