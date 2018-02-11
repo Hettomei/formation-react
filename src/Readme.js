@@ -1,24 +1,10 @@
 import React from 'react';
 import Code from './shared/Code';
-import logo from './shared/consertoLogo.svg'; // Tell Webpack this JS file uses this image
-
-// just to avoid bot that read github source
-const email = [
-  'pro',
-  '.',
-  'otech',
-  'consert',
-  '@',
-  'ier',
-  'gauth',
-  '.',
-  'othee',
-  'tim',
-].reverse().join('');
+import email from './constant/email';
 
 const Readme = () => (
   <div>
-    <h2>Formation React, part <img className="readme-conserto" src={logo} alt="Logo" /></h2>
+    <h2>Le support de formation</h2>
     <p>Pour toutes questions : {email}</p>
 
     <h3>Le projet :</h3>

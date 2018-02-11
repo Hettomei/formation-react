@@ -1,10 +1,10 @@
 import Introduction from './Introduction';
 import ThreeIdea from './ThreeIdea';
 import IsItOnlyAlib from './IsItOnlyAlib';
-import ConcretApplication from './ConcretApplication';
+import SomeExamples from './SomeExamples';
 import Training from './Training';
 import Readme from './Readme';
-import GetStarted from './GetStarted';
+import HelloWorld from './HelloWorld';
 import ComponentsAndProps from './ComponentsAndProps';
 import ComponentsAndState from './ComponentsAndState';
 import ExoNChronos from './exo/ExoNChronos';
@@ -17,24 +17,24 @@ const tree = [
     desc: 'Introduction',
     children: [
       {
-        path: '/intro/3-idea',
+        path: '/intro/3-idees',
         component: ThreeIdea,
         desc: '3 Idées',
       },
       {
-        path: '/intro/are-you-sure-it-is-only-a-lib--confuse',
+        path: '/intro/seulement-une-librairie',
         component: IsItOnlyAlib,
         desc: 'Seulement une librairie ?'
       },
       {
-        path: '/intro/concret-application',
-        component: ConcretApplication,
-        desc: `Exemples`
+        path: '/intro/quelques-exemples',
+        component: SomeExamples,
+        desc: `Quelques exemples`
       },
     ]
   },
   {
-    path: '/the-training',
+    path: '/la-formation',
     component: Training,
     desc: 'La formation',
     children: [
@@ -46,9 +46,9 @@ const tree = [
     ]
   },
   {
-    path: '/get-started',
-    component: GetStarted,
-    desc: 'Get started'
+    path: '/hello-world',
+    component: HelloWorld,
+    desc: 'Hello World'
   },
   {
     path: '/components-and-props',
