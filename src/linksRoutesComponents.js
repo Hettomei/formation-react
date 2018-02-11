@@ -5,8 +5,10 @@ import SomeExamples from './SomeExamples';
 import Training from './Training';
 import Readme from './Readme';
 import HelloWorld from './HelloWorld';
+import ComponentsIntroduction from './ComponentsIntroduction';
 import ComponentsAndProps from './ComponentsAndProps';
 import ComponentsAndState from './ComponentsAndState';
+import ComponentsAndChildren from './ComponentsAndChildren';
 import ExoNChronos from './exo/ExoNChronos';
 import GameSVG from './GameSVG';
 
@@ -51,14 +53,26 @@ const tree = [
     desc: 'Hello World'
   },
   {
-    path: '/components-and-props',
-    component: ComponentsAndProps,
-    desc: 'Des components et des props',
-  },
-  {
-    path: '/components-and-state',
-    component: ComponentsAndState,
-    desc: 'Etat interne : le state'
+    path: '/components',
+    component: ComponentsIntroduction,
+    desc: 'Les <<Components>>',
+    children: [
+      {
+        path: '/components/props',
+        component: ComponentsAndProps,
+        desc: 'Les props',
+      },
+      {
+        path: '/components/state',
+        component: ComponentsAndState,
+        desc: 'Etat interne : le state'
+      },
+      {
+        path: '/components/children',
+        component: ComponentsAndChildren,
+        desc: 'les <<children>>'
+      },
+    ]
   },
   {
     path: '/exo-create-chronos',

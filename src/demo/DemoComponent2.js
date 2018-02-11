@@ -4,10 +4,10 @@ import { Panel } from 'react-bootstrap';
 const DemoComponent2 = (props) => (
   <Panel bsStyle="success">
     <Panel.Heading>
-      <Panel.Title componentClass="h3">2eme composant</Panel.Title>
+      <Panel.Title componentClass="h3">Démo</Panel.Title>
     </Panel.Heading>
     <Panel.Body>
-      Composant avec children
+      Composant avec children :
       {props.children}
       {props.children}
       {props.children}

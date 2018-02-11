@@ -1,18 +1,9 @@
 import React from 'react';
-import DemoComponent from './demo/DemoComponent';
-import DemoComponent2 from './demo/DemoComponent2';
-import DemoComponent3 from './demo/DemoComponent3';
 
 const ComponentsAndProps = () => (
   <div>
-    <h2>Components</h2>
-    <h5>Une simple balise html</h5>
-
-    <DemoComponent />
-
-    <DemoComponent2>
-      <DemoComponent3 includedIn='DemoComponent2'/>
-    </DemoComponent2>
+    <h2>Les props</h2>
+    <p>TODO: Explicit what are props</p>
   </div>
 )
 
