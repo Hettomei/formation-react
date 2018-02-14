@@ -1,6 +1,6 @@
 import React from 'react';
 import Code from './shared/Code';
-import { Panel } from 'react-bootstrap';
+import { Panel, Label } from 'react-bootstrap';
 
 function Demo(props) {
   const foo = 'bar';
@@ -17,7 +17,7 @@ function Demo(props) {
 
 const ComponentsIntroduction = () => (
   <div>
-    <h2>Les {'<<Components>>'}</h2>
+    <h2>Les Components</h2>
 
     <p>Un 'component' est un élement affiché par react :</p>
 
@@ -45,8 +45,8 @@ const element = <div>
 `}
     </Code>
 
-    <p>div, p, ul, li, li sont tous des components, pour s'en convaincre, voici la transformation via babel :</p>
-
+    <p>
+      <Label>div</Label> <Label>p</Label> <Label>ul</Label> <Label>li</Label> sont tous des components, pour s'en convaincre, voici la transformation via babel :</p>
     <Code>
         {`
 const foo = 'bar';

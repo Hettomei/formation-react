@@ -55,7 +55,7 @@ const tree = [
   {
     path: '/components',
     component: ComponentsIntroduction,
-    desc: 'Les <<Components>>',
+    desc: 'Les Components',
     children: [
       {
         path: '/components/props',
@@ -70,7 +70,7 @@ const tree = [
       {
         path: '/components/children',
         component: ComponentsAndChildren,
-        desc: 'les <<children>>'
+        desc: 'les children'
       },
     ]
   },

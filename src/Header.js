@@ -30,17 +30,11 @@ function Header(props) {
         <NavItem href='https://github.com/facebook/flux'>flux implementation</NavItem>
       </NavDropdown>
 
-      <NavDropdown title="Redux" id="basic-nav-dropdown">
-        <NavItem href='https://redux.js.org/'>redux.js.org</NavItem>
-      </NavDropdown>
+      <NavItem href='https://redux.js.org/'>Redux</NavItem>
 
-      <NavDropdown title="React-router" id="basic-nav-dropdown">
-        <NavItem href='https://reacttraining.com/react-router/'>react-router</NavItem>
-      </NavDropdown>
+      <NavItem href='https://reacttraining.com/react-router/'>React-router</NavItem>
 
-      <NavDropdown title="React-Bootstrap" id="basic-nav-dropdown">
-        <NavItem href='https://react-bootstrap.github.io/'>React-Bootstrap</NavItem>
-      </NavDropdown>
+      <NavItem href='https://react-bootstrap.github.io/'>React-Bootstrap</NavItem>
 
     </Nav>
   </Navbar>
