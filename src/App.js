@@ -10,7 +10,6 @@ import linksRoutesComponents from './linksRoutesComponents';
 
 import Header from './Header';
 import Home from './Home';
-import Introduction from './Introduction';
 import MenuLinks from './MenuLinks';
 import Page404 from './Page404';
 
