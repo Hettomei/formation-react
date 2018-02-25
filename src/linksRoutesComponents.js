@@ -11,6 +11,9 @@ import ComponentsAndState from './ComponentsAndState';
 import ComponentsAndChildren from './ComponentsAndChildren';
 import ExoNChronos from './exo/ExoNChronos';
 import GameSVG from './GameSVG';
+import Redux from './Redux';
+import Debugger from './Debugger';
+import UnitTest from './UnitTest';
 
 const tree = [
   {
@@ -83,6 +86,21 @@ const tree = [
     path: '/game-svg',
     component: GameSVG,
     desc: 'Un jeu'
+  },
+  {
+    path: '/redux',
+    component: Redux,
+    desc: 'Redux'
+  },
+  {
+    path: '/debugger',
+    component: Debugger,
+    desc: 'Le debugger'
+  },
+  {
+    path: '/unit-test',
+    component: UnitTest,
+    desc: 'Test unitaire'
   },
 ]
 
