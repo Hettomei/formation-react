@@ -40,7 +40,7 @@ npm start
     {`
 cd react-budget
 git checkout -b test-exercice-chronos
-# hack hack hack
+# hack
 git commit
 
 # Retour sur le projet de base
