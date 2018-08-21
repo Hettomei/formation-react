@@ -6,7 +6,6 @@ import Training from './Training';
 import Readme from './Readme';
 import HelloWorld from './HelloWorld';
 import ComponentsIntroduction from './ComponentsIntroduction';
-import ComponentsAndProps from './ComponentsAndProps';
 import ComponentsAndState from './ComponentsAndState';
 import ComponentsAndChildren from './ComponentsAndChildren';
 import ExoNChronos from './exo/ExoNChronos';
@@ -61,36 +60,11 @@ const tree = [
     desc: 'Les Components',
     children: [
       {
-        path: '/components/props',
-        component: ComponentsAndProps,
-        desc: 'Les props',
-      },
-      {
         path: '/components/state',
         component: ComponentsAndState,
         desc: 'Etat interne : le state'
       },
-      {
-        path: '/components/children',
-        component: ComponentsAndChildren,
-        desc: 'les children'
-      },
     ]
-  },
-  {
-    path: '/exo-create-chronos',
-    component: ExoNChronos,
-    desc: 'Exercice : créer N chronos'
-  },
-  {
-    path: '/game-svg',
-    component: GameSVG,
-    desc: 'Un jeu'
-  },
-  {
-    path: '/redux',
-    component: Redux,
-    desc: 'Redux'
   },
   {
     path: '/debugger',
@@ -102,6 +76,32 @@ const tree = [
     component: UnitTest,
     desc: 'Test unitaire'
   },
+  {
+    path: '/misc',
+    desc: 'Misc',
+    children: [
+      {
+        path: '/misc/components/children',
+        component: ComponentsAndChildren,
+        desc: 'les children'
+      },
+      {
+        path: '/misc/exo-create-chronos',
+        component: ExoNChronos,
+        desc: 'Exercice : créer N chronos'
+      },
+      {
+        path: '/misc/game-svg',
+        component: GameSVG,
+        desc: 'Un jeu'
+      },
+      {
+        path: '/misc/redux',
+        component: Redux,
+        desc: 'Redux'
+      },
+    ]
+  }
 ]
 
 function flat(a, b) {
