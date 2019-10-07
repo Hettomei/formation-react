@@ -1,15 +1,15 @@
 // just to avoid bot that read github source
 const email = [
-  'pro',
-  '.',
-  'otech',
-  'consert',
+  '.com',
+  'il',
+  'ma',
+  'g',
   '@',
+  '42',
   'ier',
   'gauth',
   '.',
-  'othee',
-  'tim',
+  't',
 ].reverse().join('');
 
 export default email;
